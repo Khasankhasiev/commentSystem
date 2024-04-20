@@ -96,4 +96,32 @@
   background: url("../image/favorite.svg") no-repeat;
   border: none;
   margin-left: 9px;
+}
+.section__input-comment {
+  display: flex;
+  margin-top: 32px;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+}
+.section__input-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.section__description {
+  display: flex;
+  -moz-column-gap: 378px;
+       column-gap: 378px;
+}
+.section .nickname {
+  color: rgb(18, 42, 192);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22px;
+}
+.section .simbols {
+  color: rgba(0, 0, 0, 0.4);
+  font-style: italic;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
 }/*# sourceMappingURL=style.css.map */
