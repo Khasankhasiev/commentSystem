@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles/reset.css" />
     <link rel="stylesheet" href="styles/style.css" />
   </head>
@@ -45,19 +51,23 @@
               <p class="nickname">Максим Авдеенко</p>
               <p class="simbols">Макс 1000 символов</p>
             </div>
-            <div class="section__interaction">
-              <form action="" class="section__text">
-                <input
-                  class="input"
-                  type="text"
-                  placeholder="Введите текст сообщения..."
-                />
-                <button class="button" type="submit">Отправить</button>
-              </form>
-            </div>
+
+            <form action="" class="section__form">
+              <textarea
+                id="textarea"
+                class="textarea"
+                type="text"
+                placeholder="Введите текст сообщения..."
+                name="comments"
+              ></textarea>
+              <button class="section__form-button" disabled type="submit">
+                Отправить
+              </button>
+            </form>
           </div>
         </div>
       </div>
     </section>
+    <script src="scripts/script.js"></script>
   </body>
 </html>
