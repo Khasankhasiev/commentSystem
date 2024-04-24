@@ -220,16 +220,20 @@
     }
     &-counter {
       column-gap: 10px;
+
       .section__comment-button {
         background-color: rgb(0, 0, 0, 0.1);
         border-radius: 50%;
 
-        width: 20px;
+        flex: 0 0 20px;
         height: 20px;
 
         align-items: center;
         justify-content: center;
+
+        user-select: none;
       }
+
       .plus {
         color: rgb(138, 197, 64);
       }

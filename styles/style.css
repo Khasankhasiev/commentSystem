@@ -206,10 +206,13 @@
 .section__comment-counter .section__comment-button {
   background-color: rgba(0, 0, 0, 0.1);
   border-radius: 50%;
-  width: 20px;
+  flex: 0 0 20px;
   height: 20px;
   align-items: center;
   justify-content: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 .section__comment-counter .plus {
   color: rgb(138, 197, 64);
