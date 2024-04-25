@@ -1,6 +1,28 @@
 // functionality for comment input height
 
+// const tx = document.getElementsByTagName("textarea");
 const tx = document.getElementsByTagName("textarea");
+const textarea = document.querySelector("#textarea");
+const simbols = document.querySelector(".simbols");
+const btn = document.querySelector(".section__form-button");
+
+textarea.addEventListener("input", () => {
+  simbols.innerHTML = ` ${textarea.value.length}/1000`;
+
+  if (textarea.value.length == 0) {
+    simbols.innerHTML = ` Макс. симовлов 1000 `;
+    btn.setAttribute("disabled", "");
+    simbols.style.color = "rgba(0, 0, 0, 0.4)";
+  } else if (1000 > textarea.value.length > 0) {
+    btn.removeAttribute("disabled");
+    simbols.style.color = "rgba(0, 0, 0, 0.4)";
+  } else if (textarea.value.length > 1000) {
+    btn.setAttribute("disabled", "");
+    simbols.style.color = "red";
+  }
+});
+
+console.log(textarea.value);
 for (let i = 0; i < tx.length; i++) {
   tx[i].addEventListener("input", OnInput, false);
 }
