@@ -5,6 +5,7 @@ const tx = document.getElementsByTagName("textarea");
 const textarea = document.querySelector("#textarea");
 const simbols = document.querySelector(".simbols");
 const btn = document.querySelector(".section__form-button");
+console.dir(textarea);
 
 textarea.addEventListener("input", () => {
   simbols.innerHTML = ` ${textarea.value.length}/1000`;
@@ -35,6 +36,7 @@ function OnInput() {
 // functionality for likes and dislikes
 
 const counters = document.querySelectorAll(".section__comment-counter");
+let value = 0;
 
 if (counters) {
   counters.forEach((conuter) => {
@@ -45,7 +47,7 @@ if (counters) {
         let closest = target
           .closest(".section__comment-counter")
           .querySelector(".section__comment-like");
-        let value = parseInt(closest.innerText);
+
         if (target.classList.contains("plus")) {
           value++;
         } else if (target.classList.contains("minus")) {
