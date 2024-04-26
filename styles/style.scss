@@ -221,6 +221,15 @@
     &-functional * {
       display: flex;
     }
+
+    &-favorite {
+      cursor: pointer;
+      user-select: none;
+    }
+    &-answer {
+      cursor: pointer;
+      user-select: none;
+    }
     &-counter {
       column-gap: 10px;
 

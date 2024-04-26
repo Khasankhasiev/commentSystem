@@ -5,7 +5,6 @@ const tx = document.getElementsByTagName("textarea");
 const textarea = document.querySelector("#textarea");
 const simbols = document.querySelector(".simbols");
 const btn = document.querySelector(".section__form-button");
-console.dir(textarea);
 
 textarea.addEventListener("input", () => {
   simbols.innerHTML = ` ${textarea.value.length}/1000`;
@@ -23,7 +22,6 @@ textarea.addEventListener("input", () => {
   }
 });
 
-console.log(textarea.value);
 for (let i = 0; i < tx.length; i++) {
   tx[i].addEventListener("input", OnInput, false);
 }
@@ -70,58 +68,27 @@ if (counters) {
   });
 }
 
-// <!DOCTYPE html>
-// <html lang="en">
-// <head>
-// <meta charset="UTF-8">
-// <meta name="viewport" content="width=device-width, initial-scale=1.0">
-// <title>Счетчик лайков</title>
-// <style>
-//     #counter {
-//         font-size: 24px;
-//     }
-//     .positive {
-//         color: green;
-//     }
-//     .neutral {
-//         color: grey;
-//     }
-//     .negative {
-//         color: red;
-//     }
-// </style>
-// </head>
-// <body>
-//     <div id="counter" class="neutral">0</div>
-//     <button onclick="increment()">+</button>
-//     <button onclick="decrement()">-</button>
+// functionality for favorite btn
 
-//     <script>
-//         let count = 0;
-//         const counterElement = document.getElementById('counter');
+const favorite = document.querySelectorAll(".section__comment-favorite");
+console.log(favorite);
 
-//         function updateCounter() {
-//             counterElement.textContent = count;
-//             if (count > 0) {
-//                 counterElement.className = 'positive';
-//             } else if (count < 0) {
-//                 counterElement.className = 'negative';
-//             } else {
-//                 counterElement.className = 'neutral';
-//             }
-//         }
-
-//         function increment() {
-//             count++;
-//             updateCounter();
-//         }
-
-//         function decrement() {
-//             if (count > 0 || count === 0) {
-//                 count--;
-//                 updateCounter();
-//             }
-//         }
-//     </script>
-// </body>
-// </html>
+favorite.forEach((element) => {
+  element.addEventListener("click", () => {
+    console.log(element);
+    if (!element.classList.contains("active-favorite")) {
+      element.innerHTML = `
+    <img src='./image/favorite2.svg'>
+    <div class='favorite'>В избранном</div>
+    `;
+      element.classList.add("active-favorite");
+    } else if (element.classList.contains("active-favorite")) {
+      element.innerHTML = `
+      <img src='./image/favorite3.png'>
+      <div class='favorite'>В избранное</div>
+      `;
+      element.classList.remove("active-favorite");
+    }
+  });
+});
+//
